@@ -60,6 +60,23 @@ p {
   background-color: #00c4ff;
 }
 
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #00f0ff;
+  border: 2px solid #00f0ff;
+}
+
+.btn-outline:hover {
+  background-color: rgba(0, 240, 255, 0.1);
+  color: #00f0ff;
+}
+
 .social-links a {
   margin-right: 10px;
   color: white;
@@ -103,23 +120,63 @@ p {
 }
 
 .intro-image {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #7600ff, #00f0ff);
+  background: linear-gradient(145deg, #0575e6, #00f0ff);
   border-radius: 50%;
   padding: 15px;
-  box-shadow: 0 0 30px 15px rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 35px 15px rgba(5, 117, 230, 0.35);
 }
 
 .intro-image img {
   width: 400px;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 0 30px 10px rgba(0, 240, 255, 0.7);
+  box-shadow: 0 0 30px 10px rgba(0, 240, 255, 0.6);
   border: 10px solid #0c1a25;
-  background: linear-gradient(145deg, #00f0ff, #7600ff);
+  background: linear-gradient(145deg, #00f0ff, #0575e6);
   padding: 5px;
+}
+
+.wave-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background: #0c1a25;
+  border: 3px solid #00f0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+  transform-origin: 70% 70%;
+  animation: wave 2.5s infinite;
+}
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
 }
 
 /* About */
